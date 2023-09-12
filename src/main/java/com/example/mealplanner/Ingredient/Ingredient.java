@@ -23,4 +23,38 @@ public class Ingredient {
         gram,
         kilogram
     }
+
+    private unit Unit;
+
+    public Ingredient(String ingredientName, HashMap<Nutrient, Integer> nutrientContent, unit unit) {
+        this.ingredientName = ingredientName;
+        this.nutrientContent = nutrientContent;
+        Unit = unit;
+    }
+
+    @Override
+    public String toString() {
+        return "Ingredient{" +
+                "id=" + id +
+                ", ingredientName='" + ingredientName + '\'' +
+                ", nutrientContent=" + nutrientContent +
+                ", Unit=" + Unit +
+                '}';
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getIngredientName() {
+        return ingredientName;
+    }
+
+    public HashMap<Nutrient, Integer> getNutrientContent() {
+        return nutrientContent;
+    }
+
+    public unit getUnit() {
+        return Unit;
+    }
 }

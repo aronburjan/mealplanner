@@ -18,4 +18,31 @@ public class Nutrient {
 
     }
 
+    public Nutrient(){}
+
+    public Nutrient(String nutrientName, boolean isMacroNutrient) {
+        this.nutrientName = nutrientName;
+        this.isMacroNutrient = isMacroNutrient;
+    }
+
+    @Override
+    public String toString() {
+        return "Nutrient{" +
+                "id=" + id +
+                ", nutrientName='" + nutrientName + '\'' +
+                ", isMacroNutrient=" + isMacroNutrient +
+                '}';
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getNutrientName() {
+        return nutrientName;
+    }
+
+    public boolean isMacroNutrient() {
+        return isMacroNutrient;
+    }
 }
