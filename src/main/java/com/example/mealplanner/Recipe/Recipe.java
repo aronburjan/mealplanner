@@ -21,4 +21,31 @@ public class Recipe {
 
     private HashMap<Ingredient, Integer> recipeIngredients;
 
+    public Recipe(){}
+
+    public Recipe(String recipeName, HashMap<Ingredient, Integer> recipeIngredients) {
+        this.recipeName = recipeName;
+        this.recipeIngredients = recipeIngredients;
+    }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "id=" + id +
+                ", recipeName='" + recipeName + '\'' +
+                ", recipeIngredients=" + recipeIngredients +
+                '}';
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getRecipeName() {
+        return recipeName;
+    }
+
+    public HashMap<Ingredient, Integer> getRecipeIngredients() {
+        return recipeIngredients;
+    }
 }
