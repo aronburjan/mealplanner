@@ -7,15 +7,15 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class User {
+public class AppUser {
     private @Id @GeneratedValue UUID id;
     private String username;
     private String password;
     private String email;
 
-    protected User(){}
+    protected AppUser(){}
 
-    public User(String username, String password, String email){
+    public AppUser(String username, String password, String email){
         this.username = username;
         this.password = password;
         this.email = email;

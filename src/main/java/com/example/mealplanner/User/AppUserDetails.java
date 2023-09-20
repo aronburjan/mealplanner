@@ -10,9 +10,9 @@ import java.util.HashMap;
 import java.util.UUID;
 
 @Entity
-public class UserDetails {
+public class AppUserDetails {
     private @Id @GeneratedValue UUID id;
-
+    /*
     private int age;
     private int height;
     private int weight;
@@ -33,9 +33,9 @@ public class UserDetails {
     private HashMap<Nutrient, Integer> nutrientLimits;
     private HashMap<Ingredient, Integer> ingredientLimits;
 
-    public UserDetails(){}
+    public AppUserDetails(){}
 
-    public UserDetails(int age, int height, int weight, Sex sex, Goal goal, HashMap<Nutrient, Integer> nutrientLimits, HashMap<Ingredient, Integer> ingredientLimits) {
+    public AppUserDetails(int age, int height, int weight, Sex sex, Goal goal, HashMap<Nutrient, Integer> nutrientLimits, HashMap<Ingredient, Integer> ingredientLimits) {
         this.age = age;
         this.height = height;
         this.weight = weight;
@@ -90,4 +90,6 @@ public class UserDetails {
     public HashMap<Ingredient, Integer> getIngredientLimits() {
         return ingredientLimits;
     }
+
+     */
 }

@@ -10,7 +10,9 @@ import java.util.UUID;
 
 @Entity
 public class Ingredient {
+
     private @Id @GeneratedValue UUID id;
+    /*
     private String ingredientName;
 
     private HashMap<Nutrient, Integer> nutrientContent; //per 100g
@@ -57,4 +59,6 @@ public class Ingredient {
     public unit getUnit() {
         return Unit;
     }
+
+     */
 }

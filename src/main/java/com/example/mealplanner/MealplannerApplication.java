@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class }) //temporarily
-@ComponentScan({"com.delivery.request"})
+@SpringBootApplication
 public class MealplannerApplication {
 
 	public static void main(String[] args) {

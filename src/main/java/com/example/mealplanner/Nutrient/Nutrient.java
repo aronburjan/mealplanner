@@ -7,8 +7,9 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 @Entity
 public class Nutrient {
-    private @Id @GeneratedValue UUID id;
 
+    private @Id @GeneratedValue UUID id;
+    /*
     private String nutrientName;
     private boolean isMacroNutrient;
     private enum unit{
@@ -44,5 +45,5 @@ public class Nutrient {
 
     public boolean isMacroNutrient() {
         return isMacroNutrient;
-    }
+    }*/
 }

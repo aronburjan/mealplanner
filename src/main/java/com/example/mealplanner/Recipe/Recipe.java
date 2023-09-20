@@ -10,6 +10,7 @@ import java.util.UUID;
 @Entity
 public class Recipe {
     private @Id @GeneratedValue UUID id;
+    /*
     private String recipeName;
 
     private enum recipeType{
@@ -47,5 +48,5 @@ public class Recipe {
 
     public HashMap<Ingredient, Integer> getRecipeIngredients() {
         return recipeIngredients;
-    }
+    }*/
 }
