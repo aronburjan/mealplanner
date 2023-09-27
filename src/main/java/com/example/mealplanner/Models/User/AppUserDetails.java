@@ -5,6 +5,7 @@ import com.example.mealplanner.Models.Nutrient.NutrientLimit;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -19,21 +20,19 @@ public class AppUserDetails {
     @Enumerated(EnumType.STRING)
     private WeightGoal goal;
 
-    @OneToMany
-    private ArrayList<NutrientLimit> nutrientLimits;
-    @OneToMany
-    private ArrayList<IngredientLimit> ingredientLimits;
+    @OneToMany(mappedBy = "appUserDetails", cascade = CascadeType.ALL)
+    private List<NutrientLimit> nutrientLimits = new ArrayList<>();
+    @OneToMany(mappedBy = "appUserDetails", cascade = CascadeType.ALL)
+    private List<IngredientLimit> ingredientLimits = new ArrayList<>();
 
     public AppUserDetails(){}
 
-    public AppUserDetails(int age, int height, int weight, Sex sex, WeightGoal goal, ArrayList<NutrientLimit> nutrientLimits, ArrayList<IngredientLimit> ingredientLimits) {
+    public AppUserDetails(int age, int height, int weight, Sex sex, WeightGoal goal) {
         this.age = age;
         this.height = height;
         this.weight = weight;
         this.sex = sex;
         this.goal = goal;
-        this.nutrientLimits = nutrientLimits;
-        this.ingredientLimits = ingredientLimits;
     }
 
     @Override
@@ -74,11 +73,11 @@ public class AppUserDetails {
         return goal;
     }
 
-    public ArrayList<NutrientLimit> getNutrientLimits() {
+    public List<NutrientLimit> getNutrientLimits() {
         return nutrientLimits;
     }
 
-    public ArrayList<IngredientLimit> getIngredientLimits() {
+    public List<IngredientLimit> getIngredientLimits() {
         return ingredientLimits;
     }
 

@@ -15,12 +15,15 @@ public class Ingredient {
 
     private String ingredientName;
 
-    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "ingredient", cascade = CascadeType.ALL)
     private List<Nutrient> nutrientContent=new ArrayList<>();
 
     private int quantity; //should be nullable, only when a recipe exists will quantity be relevant
     @Enumerated(EnumType.STRING)
     private IngredientUnit unit;
+
+    @OneToOne(mappedBy = "limitedIngredient")
+    private IngredientLimit ingredientLimit;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="recipe_id")
     private Recipe recipe;

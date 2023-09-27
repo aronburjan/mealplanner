@@ -1,6 +1,7 @@
 package com.example.mealplanner.Models.Nutrient;
 
 import com.example.mealplanner.Models.Ingredient.Ingredient;
+import com.example.mealplanner.Models.Ingredient.IngredientLimit;
 import jakarta.persistence.*;
 
 import java.util.UUID;
@@ -20,6 +21,8 @@ public class Nutrient {
     @JoinColumn(name="ingredient_id")
     private Ingredient ingredient;
 
+    @OneToOne(mappedBy = "limitedNutrient")
+    private NutrientLimit nutrientLimit;
 
     public Nutrient(){}
 

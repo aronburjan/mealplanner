@@ -1,8 +1,7 @@
 package com.example.mealplanner.Models.Ingredient;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.mealplanner.Models.User.AppUserDetails;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
@@ -10,14 +9,19 @@ import java.util.UUID;
 public class IngredientLimit {
     private @Id
     @GeneratedValue UUID id;
-    /*
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ingredient_id")
     private Ingredient limitedIngredient;
-    private int limit;
+    private int limitedTo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="userdetail_id")
+    private AppUserDetails appUserDetails;
 
     public IngredientLimit(){}
-    public IngredientLimit(Ingredient limitedIngredient, int limit) {
+    public IngredientLimit(Ingredient limitedIngredient, int limitedTo) {
         this.limitedIngredient = limitedIngredient;
-        this.limit = limit;
+        this.limitedTo = limitedTo;
     }
 
     public Ingredient getLimitedIngredient() {
@@ -28,21 +32,21 @@ public class IngredientLimit {
         this.limitedIngredient = limitedIngredient;
     }
 
-    public int getLimit() {
-        return limit;
+    public int getLimitedTo() {
+        return limitedTo;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    public void setLimitedTo(int limitedTo) {
+        this.limitedTo = limitedTo;
     }
 
     @Override
     public String toString() {
         return "IngredientLimit{" +
                 "limitedIngredient=" + limitedIngredient +
-                ", limit=" + limit +
+                ", limit=" + limitedTo +
                 '}';
     }
 
-     */
+
 }

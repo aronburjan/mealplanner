@@ -1,8 +1,7 @@
 package com.example.mealplanner.Models.Nutrient;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.mealplanner.Models.User.AppUserDetails;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
@@ -10,16 +9,22 @@ import java.util.UUID;
 public class NutrientLimit {
     private @Id
     @GeneratedValue UUID id;
-    /*
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "nutrient_id")
     private Nutrient limitedNutrient;
-    private int limit;
+    private int limitedTo;
 
     public NutrientLimit() {
     }
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="userdetail_id")
+    private AppUserDetails appUserDetails;
+
     public NutrientLimit(Nutrient limitedNutrient, int limit) {
         this.limitedNutrient = limitedNutrient;
-        this.limit = limit;
+        this.limitedTo = limit;
     }
 
     public Nutrient getLimitedNutrient() {
@@ -30,21 +35,21 @@ public class NutrientLimit {
         this.limitedNutrient = limitedNutrient;
     }
 
-    public int getLimit() {
-        return limit;
+    public int getLimitedTo() {
+        return limitedTo;
     }
 
-    public void setLimit(int limit) {
-        this.limit = limit;
+    public void setLimitedTo(int limitedTo) {
+        this.limitedTo = limitedTo;
     }
 
     @Override
     public String toString() {
         return "NutrientLimit{" +
                 "limitedNutrient=" + limitedNutrient +
-                ", limit=" + limit +
+                ", limit=" + limitedTo +
                 '}';
     }
 
-     */
+
 }
