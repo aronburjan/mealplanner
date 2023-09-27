@@ -1,5 +1,7 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.User;
 
+import com.example.mealplanner.Models.Ingredient.IngredientLimit;
+import com.example.mealplanner.Models.Nutrient.NutrientLimit;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

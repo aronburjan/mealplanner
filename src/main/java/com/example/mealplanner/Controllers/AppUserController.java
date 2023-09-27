@@ -1,7 +1,7 @@
-package com.example.mealplanner.User.Controllers;
+package com.example.mealplanner.Controllers;
 
-import com.example.mealplanner.Models.AppUser;
-import com.example.mealplanner.User.Services.AppUserService;
+import com.example.mealplanner.Models.User.AppUser;
+import com.example.mealplanner.Services.AppUserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

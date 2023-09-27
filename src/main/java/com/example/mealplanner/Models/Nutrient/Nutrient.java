@@ -1,5 +1,6 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Nutrient;
 
+import com.example.mealplanner.Models.Ingredient.Ingredient;
 import jakarta.persistence.*;
 
 import java.util.UUID;

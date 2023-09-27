@@ -1,4 +1,4 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.User;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,7 +1,7 @@
-package com.example.mealplanner.User.Services;
+package com.example.mealplanner.Services;
 
-import com.example.mealplanner.User.Repositories.AppUserRepository;
-import com.example.mealplanner.Models.AppUser;
+import com.example.mealplanner.Repositories.AppUserRepository;
+import com.example.mealplanner.Models.User.AppUser;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

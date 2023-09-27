@@ -1,6 +1,5 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Ingredient;
 
-import com.example.mealplanner.Models.Ingredient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,6 +10,7 @@ import java.util.UUID;
 public class IngredientLimit {
     private @Id
     @GeneratedValue UUID id;
+    /*
     private Ingredient limitedIngredient;
     private int limit;
 
@@ -43,4 +43,6 @@ public class IngredientLimit {
                 ", limit=" + limit +
                 '}';
     }
+
+     */
 }

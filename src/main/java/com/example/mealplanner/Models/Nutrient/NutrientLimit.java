@@ -1,6 +1,5 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Nutrient;
 
-import com.example.mealplanner.Models.Nutrient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,6 +10,7 @@ import java.util.UUID;
 public class NutrientLimit {
     private @Id
     @GeneratedValue UUID id;
+    /*
     private Nutrient limitedNutrient;
     private int limit;
 
@@ -45,4 +45,6 @@ public class NutrientLimit {
                 ", limit=" + limit +
                 '}';
     }
+
+     */
 }

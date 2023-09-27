@@ -1,4 +1,4 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Nutrient;
 
 public enum NutrientUnit {
     microgram,

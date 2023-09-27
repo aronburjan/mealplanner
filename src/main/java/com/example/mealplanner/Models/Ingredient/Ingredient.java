@@ -1,5 +1,7 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Ingredient;
 
+import com.example.mealplanner.Models.Nutrient.Nutrient;
+import com.example.mealplanner.Models.Recipe.Recipe;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package com.example.mealplanner.Ingredient.Repositories;
+package com.example.mealplanner.Repositories;
 
-import com.example.mealplanner.Models.Ingredient;
+import com.example.mealplanner.Models.Ingredient.Ingredient;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;

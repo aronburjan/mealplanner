@@ -1,4 +1,4 @@
-package com.example.mealplanner.Models;
+package com.example.mealplanner.Models.Recipe;
 
 public enum RecipeType {
     vegan,
