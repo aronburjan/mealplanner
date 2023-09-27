@@ -1,41 +1,30 @@
-package com.example.mealplanner.User;
+package com.example.mealplanner.Models;
 
-import com.example.mealplanner.Ingredient.Ingredient;
-import com.example.mealplanner.Nutrient.Nutrient;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.UUID;
 
 @Entity
 public class AppUserDetails {
     private @Id @GeneratedValue UUID id;
-    /*
+
     private int age;
     private int height;
     private int weight;
-
-    private enum Sex{
-        female,
-        male
-    }
-    private enum Goal{
-        lose,
-        maintain,
-        gain
-    }
-
+    @Enumerated(EnumType.STRING)
     private Sex sex;
-    private Goal goal;
+    @Enumerated(EnumType.STRING)
+    private WeightGoal goal;
 
-    private HashMap<Nutrient, Integer> nutrientLimits;
-    private HashMap<Ingredient, Integer> ingredientLimits;
+    @OneToMany
+    private ArrayList<NutrientLimit> nutrientLimits;
+    @OneToMany
+    private ArrayList<IngredientLimit> ingredientLimits;
 
     public AppUserDetails(){}
 
-    public AppUserDetails(int age, int height, int weight, Sex sex, Goal goal, HashMap<Nutrient, Integer> nutrientLimits, HashMap<Ingredient, Integer> ingredientLimits) {
+    public AppUserDetails(int age, int height, int weight, Sex sex, WeightGoal goal, ArrayList<NutrientLimit> nutrientLimits, ArrayList<IngredientLimit> ingredientLimits) {
         this.age = age;
         this.height = height;
         this.weight = weight;
@@ -79,17 +68,17 @@ public class AppUserDetails {
         return sex;
     }
 
-    public Goal getGoal() {
+    public WeightGoal getGoal() {
         return goal;
     }
 
-    public HashMap<Nutrient, Integer> getNutrientLimits() {
+    public ArrayList<NutrientLimit> getNutrientLimits() {
         return nutrientLimits;
     }
 
-    public HashMap<Ingredient, Integer> getIngredientLimits() {
+    public ArrayList<IngredientLimit> getIngredientLimits() {
         return ingredientLimits;
     }
 
-     */
+
 }

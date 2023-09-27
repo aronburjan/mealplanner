@@ -1,6 +1,6 @@
 package com.example.mealplanner.User.Repositories;
 
-import com.example.mealplanner.User.AppUserDetails;
+import com.example.mealplanner.Models.AppUserDetails;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,27 +1,29 @@
-package com.example.mealplanner.Nutrient;
+package com.example.mealplanner.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 @Entity
 public class Nutrient {
 
     private @Id @GeneratedValue UUID id;
-    /*
+
+
     private String nutrientName;
     private boolean isMacroNutrient;
-    private enum unit{
-        microgram,
-        milligram,
-        gram
 
-    }
+    private int quantity; //should be nullable, only when an ingredient exists will quantity be relevant
+    @Enumerated(EnumType.STRING)
+    private NutrientUnit unit;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="ingredient_id")
+    private Ingredient ingredient;
+
 
     public Nutrient(){}
 
-    public Nutrient(String nutrientName, boolean isMacroNutrient) {
+
+    public Nutrient(String nutrientName, boolean isMacroNutrient, NutrientUnit unit) {
         this.nutrientName = nutrientName;
         this.isMacroNutrient = isMacroNutrient;
     }
@@ -45,5 +47,17 @@ public class Nutrient {
 
     public boolean isMacroNutrient() {
         return isMacroNutrient;
-    }*/
+    }
+
+    public NutrientUnit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(NutrientUnit unit) {
+        this.unit = unit;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
 }
